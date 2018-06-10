@@ -13,4 +13,5 @@ source 'https://rubygems.org' do
   gem 'sinatra-activerecord', require: 'sinatra/activerecord'
   gem 'sqlite3'
   gem 'sinatra', require: 'sinatra/base'
+  gem 'unirest'
 end

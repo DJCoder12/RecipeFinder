@@ -14,13 +14,15 @@
 ActiveRecord::Schema.define(version: 20180610073332) do
 
   create_table "pantries", force: :cascade do |t|
-    t.string "name"
-    t.string "expDate"
+    t.string  "name"
+    t.integer "amount"
+    t.integer "expDate"
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.string "name"
-    t.string "ingredient"
+    t.string  "name"
+    t.string  "ingredient"
+    t.integer "amount"
   end
 
 end

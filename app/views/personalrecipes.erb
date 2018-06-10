@@ -87,36 +87,46 @@
         </style>
     </head>
     <body>
-    <ul class="ul-spec">
-        <li class="li-spec"><a href="/">Home</a></li>
-        <li class="li-spec"><a href="/myrecipes">My Personal Recipes</a></li>
-        <li class="li-spec"><a href="/myingredients">My Ingredients</a></li>
-        <li style="float:right"><a class="active" href="/suggestions">Suggestions</a></li>
-    </ul>
-
-
-    <strong>These are your ingredients:</strong>
-
-    <p> </p>
-    <div style="float:left">
-    <% @allIngredients.each do |ingredient| %>
-        <ul class="m-l-md">
-            <li><%= ingredient.name %></li>
+        <ul class="ul-spec">
+            <li class="li-spec"><a href="/">Home</a></li>
+            <li class="li-spec"><a href="/myrecipes">My Personal Recipes</a></li>
+            <li class="li-spec"><a href="/allIngredients">My Ingredients</a></li>
+            <li style="float:right"><a class="active" href="/suggestions">Suggestions</a></li>
         </ul>
-    <% end %>
-    </div>
-    <div style="float:right">
-        <form method="POST" action="/addIngredients">
-            Ingredient:<br>
-            <input type="text" name="name" id="name">
-            <br>
-            Amount left:<br>
-            <input type="number" name="amount" id="amount" min="1">
-            <br>
-            Days Until Expired:<br>
-            <input type="number" name="date" id="date" min="1">
-            <br><br>
-            <input type="submit" value="Submit">
-        </form>
-    <div>
+
+        <strong> Personal Recipes </strong>
+        <p> </p>
+        <div style="float:left">
+        <% @ingredients.each do |recipe| %>
+            <strong> <%= recipe[0].name %> </strong>
+            <% recipe.each do |ingredient| %>
+                <ul class="m-l-md">
+                    <li><%= ingredient.ingredient %></li> 
+                </ul>
+            <% end %>
+        <% end %>
+        </div>
+
+
+        <div style="float:right">
+            <form method="POST" action="/personalrecipes">
+                Recipe Name:<br>
+                <input type="name" name="name" id="name" required>
+                <br>
+                Ingredient:<br>
+                <input type="name" name="ingredient" id="ingredient" required>
+                <br>
+                Amount:<br>
+                <input type="integer" name="amount" id="amount" min="1" requried>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+
+
+
+
+    </body>
+</html>
 

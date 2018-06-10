@@ -3,6 +3,7 @@ class CreateRecipes < ActiveRecord::Migration
     create_table "recipes", force: :cascade do |t|
       t.string "name"
       t.string "ingredient"
+      t.integer "amount"
     end
   end
 end

@@ -38,7 +38,7 @@ class RecipeFinder
     
     end
     
-  [mday,mlist]
+  return [mday,mlist]
 
   end
 
@@ -55,7 +55,7 @@ class RecipeFinder
     end
     use = []
     nuse =[]
-    recipes.each do |item|
+    recipes.each do |item, value|
       if usable(lim,pantry,recipes[item],day,upantry) == true
         use.push(item)
       else
@@ -63,18 +63,20 @@ class RecipeFinder
       end
     end
     return use
-end
-
-def self.usable(lim,pantry,recipe,day,upantry)
-  recipe.each do |item| 
-    if !pantry.include? item
-      return false
-    elsif pantry[item][1] < recipe[item]+upantry[item]
-      return false
-    elsif pantry[item][2] < day
-      return false
-    end
   end
 
-  return true
+  def self.usable(lim,pantry,recipe,day,upantry)
+    recipe.each do |item| 
+      if !pantry.include? item
+        return false
+      elsif pantry[item][1] < recipe[item]+upantry[item]
+        return false
+      elsif pantry[item][2] < day
+        return false
+      end
+    end
+
+    return true
+  end
+
 end

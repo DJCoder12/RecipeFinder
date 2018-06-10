@@ -1,0 +1,14 @@
+development:
+  adapter: sqlite3
+  database: db/data/development.sqlite
+  pool: 10
+
+test:
+  adapter: sqlite3
+  database: db/data/test.sqlite
+  pool: 10
+
+production:
+  adapter: sqlite3
+  database: db/data/development.sqlite
+  pool: 10

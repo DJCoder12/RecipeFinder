@@ -1,4 +1,5 @@
 source 'https://rubygems.org' do
+  gem 'activerecord', require: 'active_record'
   gem 'awesome_print'
   gem 'pry'
   gem 'pry-byebug'
@@ -9,5 +10,7 @@ source 'https://rubygems.org' do
   gem 'require_all'
   gem 'shotgun'
   gem 'sidekiq'
+  gem 'sinatra-activerecord', require: 'sinatra/activerecord'
+  gem 'sqlite3'
   gem 'sinatra', require: 'sinatra/base'
 end

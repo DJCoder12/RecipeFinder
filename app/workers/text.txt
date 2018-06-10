@@ -1,0 +1,10 @@
+ground+beef%2Capples%2Ccarrots%2Cpasta%2Cbutter%2Ccurry+powder%2Clentils
+
+
+
+"https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?includeIngredients=apples%2Cflour%2Csugar%2Csardines%2Cground+b    eef%2Clentil%2Csquash%2Cpasta%2Crice%2C+chicken%2C+bread%2Cegg%2Ccarrot%2Cbu    tter%2Ctomato%2Cbread%2Ccumin%2Cgrean+beans%2Ccurry+powder%2C+olive+oil%2Cpe    pper%2Csalt&limitLicense=false&type=main+course&ranking=0&offset=0&number=10    00&minAlcohol=0&mincaffeine=0&mincopper=0&mincalcium=0&mincholine=0&minchole    sterol=0&minfluoride=0&minSaturatedFat=0&minVitaminA=0&minvitaminc=0&minvita    mind=0&minvitamine=0&minvitamink=0&minvitaminb1=0&minvitaminb2=0&minvitaminb    3=0&minvitaminb5=0&minvitaminb6=0&minvitaminb12=0&minFiber=0&minfolate=0&min    folicacid=0&miniodine=0&miniron=0&minmagnesium=0&minmanganese=0&minphosphoru    s=0&minpotassium=0&minselenium=0&minsodium=0&minSugar=0&minzinc=0"
+
+
+
+
+["apples","banana", "grapes", "oranges", "pineapple", "strawberries", "blueberries", "raisins", "bell+peppers", "carrots", "cabbage", "lettuce", "onion", "potatoes", "tomatoes", "corn", "canned+tomatoes", "bread", "cereal", "crackers", "oatmeal", "pasta", "rice", "beans", "ground+beef", "chicken+breast", "eggs", "almonds", "peanut+butter", "pork+loin+chops", "salmon", "tuna", "turkey", "cheddar+cheese", "frozen+yogurt", "milk", "olive+oil", "mayonnaise", "canola+oil", "butter", "pepper", "chicken+broth", "chili+powder", "cinnamon", "garlic", "italian+seasoning", "mustard", "rosemary", "thyme", "vanilla", "vinegar", "sugar", "brown+sugar"]

@@ -10,4 +10,5 @@ source 'https://rubygems.org' do
   gem 'shotgun'
   gem 'sidekiq'
   gem 'sinatra', require: 'sinatra/base'
+  gem 'unirest'
 end

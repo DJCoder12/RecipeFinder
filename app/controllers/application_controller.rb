@@ -13,15 +13,24 @@ class ApplicationController < Sinatra::Base
   # )
 
 
-  get '/' do
-    erb :index
-  end
-
   get '/home' do
+    # @allIngredients = Pantries.all
+    # @allIngredients.each do |ingredient|
+    #   puts ingredient.name
+    # end
     erb :home
   end
 
-  post '/form' do
+  get '/' do
+    erb :home
+  end
+
+  get '/allIngredients' do
+    @allIngredients = Pantries.all
+    erb :allIngredients
+  end
+
+  post '/addIngredients' do
     name = params['name']
     expDate = params['date']
 
@@ -30,8 +39,16 @@ class ApplicationController < Sinatra::Base
       expDate: expDate,
     )
 
-    redirect to "/home"
+    redirect "/allIngredients"
   end
+
+
+  get '/suggestions' do
+    @allIngredients = Pantries.all
+    @recipes= Recipes.all
+    erb :suggestions
+  end
+                                  
 
 
 end

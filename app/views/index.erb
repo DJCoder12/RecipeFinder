@@ -1,8 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">My Recipes</a></li>
+  <li><a href="#contact">My Ingredients</a></li>
+  <li style="float:right"><a class="active" href="#about">My Calendar</a></li>
+</ul>
+
+<h1>Welcome to recipe finder!</h1>
+    <form action="/ingredients" method="POST">
+    <div id='parent'>
+      <b><p><h1 style="color:lime"</p></b>Ingredient Name</h1>
+      <textarea>Name of Ingredient</textarea>
+    </div>
+    <b><p> Expiration Date</p></b>
+    <textarea>When does your ingredient expire?</textarea>
+<p><button onClick="addBox()">add ingredient</button></p>
+</form>
+
+<button type="submit" form="form1" value="Submit">Submit</button
+</body>
 </html>

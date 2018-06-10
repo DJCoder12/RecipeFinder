@@ -50,6 +50,31 @@ class RecipeFinder
 
     rlist.each do |item|
       recipes[item].each do |ing|
+        upantry[ing]+=recipes[item][ing]
+      end
+    end
+    use = []
+    nuse =[]
+    recipes.each do |item|
+      if usable(lim,pantry,recipes[item],day,upantry) == true
+        use.push(item)
+      else
+        nuse.push(item)
+      end
+    end
+    return use
+end
 
+def self.usable(lim,pantry,recipe,day,upantry)
+  recipe.each do |item| 
+    if !pantry.include? item
+      return false
+    elsif pantry[item][1] < recipe[item]+upantry[item]
+      return false
+    elsif pantry[item][2] < day
+      return false
+    end
   end
+
+  return true
 end

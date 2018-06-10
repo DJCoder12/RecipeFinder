@@ -18,7 +18,7 @@ def get_ing(recipe,goodr)
   end
   return inglist
 end
-def rec(ing)
+def rec(ing3)
   ing2 = ["apples","flour","sugar","sardines","ground+beef","lentil","squash","pasta","rice", "chicken", "bread","egg","carrot","butter","tomato","bread","cumin","grean+beans","curry+powder", "olive+oil","pepper","salt"]
 
 
@@ -40,7 +40,7 @@ def rec(ing)
 
 
   ing = ["ground+beef","apples","carrots","pasta","butter","curry+powder","lentils"]
-  ing = ing2
+  ing = ing3
   tot = ing[0]
   i = 1
   while i < ing.length
@@ -66,33 +66,29 @@ def rec(ing)
   }
   #puts response.body
   stuff = response.body
-  puts stuff.keys
+  #puts stuff.keys
   goodr = Hash.new
   recipes= stuff["results"]
-  puts stuff["results"][0]
+  #puts stuff["results"][0]
   recipes.each do |item|
     if item["missedIngredientCount"] == 0
       goodr[item["title"]]=item
-     puts item["title"]
+     #puts item["title"]
     end
   end
   puts "done find"
-  puts goodr.keys[1]
-  get_ing(goodr.keys[1],goodr)
+  #puts goodr.keys[1]
+  #get_ing(goodr.keys[1],goodr)
   inrec = Hash.new
   puts "here"
   ks = goodr.keys
   i =0
   while i<ks.length
-    puts ks[i]
+    #puts ks[i]
     inrec[goodr.keys[i]] = get_ing(goodr.keys[i],goodr)
+    i+=1
   end
-  goodr.each do |item|
-    puts item
-    #inrec[item["title"]]=get_ing(item,goodr)
-  end
-  return inrec
+  return [inrec,goodr]
 end
-ing = ["cow"]
-i=rec(ing)
-
+#ing = ["cow"]
+#i=rec(ing)
